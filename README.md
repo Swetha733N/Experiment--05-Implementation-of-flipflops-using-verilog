@@ -1,8 +1,15 @@
 # Experiment--05-Implementation-of-flipflops-using-verilog
-### AIM: To implement all the flipflops using verilog and validating their functionality using their functional tables
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### AIM: 
+To implement all the flipflops using verilog and validating their functionality using their functional tables
+
+### HARDWARE REQUIRED:  –  
+PC, Cyclone II , USB flasher
+
+### SOFTWARE REQUIRED:  
+Quartus prime
+
 ### THEORY 
+
 SR Flip-Flop
 SR flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, SR latch operates with enable signal. The circuit diagram of SR flip-flop is shown in the following figure.
 
@@ -102,39 +109,101 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
 
+### 1.Using nand gates and wires construct sr flipflops
+
+### 2.Repeat the same steps for jk,t,d flipflops
+
+### 3.Find RTL logic and timing diagram for all flipflops
+
+### 4. End the program
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:N.SWETHA
+RegisterNumber:22008828
 
+### SR flipflop
 
+module FlipFlopSR(S,R,clock,Q,Qbar);
+input S,R,clock;
+output Q,Qbar;
+wire X,Y;
+nand(X,S,clock);
+nand(Y,R,clock);
+nand(Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
 
+### JK flipflop
 
+module FlipFlopJK(J,K,clock,Q,Qbar);
+input J,K,clock;
+output Q,Qbar;
+wire P,S;
+nand(P,J,clock,Qbar);
+nand(S,K,clock,Q);
+nand(Q,P,Qbar);
+nand(Qbar,S,Q);
+endmodule
 
+### T flipflop 
+
+module FlipFlopT(T,clock,Q,Qbar);
+input T,clock;
+output Q,Qbar;
+wire A,B;
+nand(A,T,clock,Qbar);
+nand(B,T,clock,Q);
+nand(Q,A,Qbar);
+nand(Qbar,B,Q);
+endmodule
+
+### D flipflop
+
+module FlipFlopD(D,clock,Q,Qbar);
+input D,clock;
+output Q,Qbar;
+assign Dbar=~D;
+wire X,Y;
+nand(X,D,clock);
+nand(Y,Dbar,clock);
+nand(Q,X,Qbar);
+nand(Qbar,Y,Q);
+endmodule
+```
 
 ### RTL LOGIC FOR FLIPFLOPS 
+ 
+ ### SR flipflop 
+ ![images](./images/srRTL)
 
+### JK flipflop
+![images](./images/jkRTL)
 
+### D flipflop
+![images](./images/dfRTL)
 
-
-
-
-
+### T flipflop
+![images](./images/tfRTL)
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
+### SR flipflop
+![images](./images/srstimulation)
 
+### JK flipflop
+![images](./images/jkstimulation)
 
+### D flipflop
+![images](./images/dfstimulation)
 
-
-
+### T flipflop
+![images](./images/tfstimulation)
 
 
 ### RESULTS 
+Thus the flipflops circuit are designed and the truth table is verified using quartus software
