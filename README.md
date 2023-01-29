@@ -178,31 +178,46 @@ endmodule
 ### RTL LOGIC FOR FLIPFLOPS 
  
  ### SR flipflop 
- ![images](./images/srRTL)
+ 
+ ![srRTL](https://user-images.githubusercontent.com/122199934/215306823-49f99f22-2402-46b0-bc4d-7d07d87e6ef9.png)
+
 
 ### JK flipflop
-![images](./images/jkRTL)
+
+![jkRTL](https://user-images.githubusercontent.com/122199934/215306857-d7030ecc-a4ca-4b08-ad1c-819e4e092327.png)
+
 
 ### D flipflop
-![images](./images/dfRTL)
+
+![dfRTL](https://user-images.githubusercontent.com/122199934/215306891-d0493ad9-d03f-4038-8f99-6d2bea4edf32.png)
+
 
 ### T flipflop
-![images](./images/tfRTL)
+
+![tfRTL](https://user-images.githubusercontent.com/122199934/215306909-7cc7f962-64df-4a6e-8540-0d79296cdffe.png)
+
+
 
 
 ### TIMING DIGRAMS FOR FLIP FLOPS 
 
 ### SR flipflop
-![images](./images/srstimulation)
+
+![srstimulation](https://user-images.githubusercontent.com/122199934/215306955-b4df33b4-83b3-439d-9600-2f5fb105e65e.png)
+
 
 ### JK flipflop
-![images](./images/jkstimulation)
+
+![jkstimulation](https://user-images.githubusercontent.com/122199934/215306969-86d87d7b-d06c-421b-ae5f-84953c37d387.png)
+
 
 ### D flipflop
-![images](./images/dfstimulation)
+
+![dfstimulation](https://user-images.githubusercontent.com/122199934/215306977-fd40dd0d-4824-47e6-8d05-c5b8ab43f1b2.png)
 
 ### T flipflop
-![images](./images/tfstimulation)
+
+![tstimulation](https://user-images.githubusercontent.com/122199934/215307008-b172c013-0d85-4080-b155-3221e071acbb.png)
 
 
 ### RESULTS 
